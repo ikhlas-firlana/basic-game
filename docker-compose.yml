@@ -1,0 +1,15 @@
+version: '3'
+services:
+  basic_game_brackeys:
+    build: .
+    image: "node:16-slim"
+    ports:
+      - "80"
+    # volumes:
+    #   - .:/usr/local/users
+    command: sh -c "tail -f /dev/null"
+
+networks:
+  default:
+    external:
+      name: localnetwork
